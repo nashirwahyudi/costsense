@@ -15,7 +15,7 @@
     "type": "git",
     "url": "https://github.com/themeselection/materio-mui-react-nextjs-admin-template-free.git"
   },
-  "homepage": "https://themeselection.com/products/materio-free-mui-react-nextjs-admin-template/",
+  "homepage": "http://maximumdas.github.io/CostSense",
   "keywords": [
     "react",
     "javascript",
@@ -41,7 +41,9 @@
     "start": "next start",
     "export": "next export",
     "lint": "eslint --fix \"src/**/*.{js,jsx}\"",
-    "format": "prettier --write \"src/**/*.{js,jsx}\""
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build"
   },
   "dependencies": {
     "@emotion/cache": "^11.6.0",
