@@ -83,7 +83,7 @@ const WeeklyOverview = () => {
   return (
     <Card>
       <CardHeader
-        title='Distribusi Data'
+        title='Top 10 Provinsi ...'
         titleTypographyProps={{
           sx: { lineHeight: '2rem !important', letterSpacing: '0.15px !important' }
         }}
@@ -99,7 +99,9 @@ const WeeklyOverview = () => {
           <Typography variant='h5' sx={{ mr: 4 }}>
             50%
           </Typography>
-          <Typography variant='body2' sx={{ml: 5}}>Data berada diantara selang interquantile range</Typography>
+          <Typography variant='body2' sx={{ ml: 5 }}>
+            Data berada diantara selang interquantile range
+          </Typography>
         </Box>
         <Button fullWidth variant='contained'>
           Lihat Lebih Lengkap

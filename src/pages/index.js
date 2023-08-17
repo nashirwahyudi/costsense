@@ -15,28 +15,30 @@ import ApexChartWrapper from 'src/@core/styles/libs/react-apexcharts'
 
 // ** Demo Components Imports
 import Table from 'src/views/dashboard/Table'
-import Trophy from 'src/views/dashboard/Trophy'
-import TotalEarning from 'src/views/dashboard/TotalEarning'
+import Transaksi from 'src/views/dashboard/Transaksi'
+import MapContainer from 'src/views/dashboard/MapContainer'
 import StatisticsCard from 'src/views/dashboard/StatisticsCard'
 import WeeklyOverview from 'src/views/dashboard/WeeklyOverview'
-import DepositWithdraw from 'src/views/dashboard/DepositWithdraw'
-import SalesByCountries from 'src/views/dashboard/SalesByCountries'
+import Control from 'src/views/dashboard/Control'
 
 const Dashboard = () => {
   return (
     <ApexChartWrapper>
       <Grid container spacing={6}>
+        <Grid item xs={12}>
+          <Control />
+        </Grid>
         <Grid item xs={12} md={4}>
-          <Trophy />
+          <Transaksi />
         </Grid>
         <Grid item xs={12} md={8}>
           <StatisticsCard />
         </Grid>
+        <Grid item xs={12} md={12}>
+          <MapContainer />
+        </Grid>
         <Grid item xs={12} md={6} lg={4}>
           <WeeklyOverview />
-        </Grid>
-        <Grid item xs={12} md={8}>
-          <TotalEarning />
         </Grid>
         {/* <Grid item xs={12} md={6} lg={4}>
           <Grid container spacing={6}>

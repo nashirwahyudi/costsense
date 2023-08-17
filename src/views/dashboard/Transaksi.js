@@ -21,7 +21,7 @@ const TrophyImg = styled('img')({
   position: 'absolute'
 })
 
-const Trophy = () => {
+const Transaksi = () => {
   // ** Hook
   const theme = useTheme()
   const imageSrc = theme.palette.mode === 'light' ? 'triangle-light.png' : 'triangle-dark.png'
@@ -29,21 +29,20 @@ const Trophy = () => {
   return (
     <Card sx={{ position: 'relative' }}>
       <CardContent>
-        <Typography variant='h6'>Transaksi BPJS Mencurigakan!</Typography>
+        <Typography variant='h6'>Transaksi BPJS</Typography>
         <Typography variant='body2' sx={{ letterSpacing: '0.25px' }}>
-          Jumlah transaksi tarif verifikasi dibawah biaya tagih.
+          Jumlah transaksi BPJS terverif.
         </Typography>
         <Typography variant='h5' sx={{ my: 4, color: 'primary.main' }}>
-          42 Transaksi
+          12578 Transaksi
         </Typography>
         <Button variant='contained' size='small'>
           Lihat Lebih Lengkap
         </Button>
         <TriangleImg alt='triangle background' src={`/images/misc/${imageSrc}`} />
-        {/* <TrophyImg alt='trophy' src='/images/misc/trophy.png' /> */}
       </CardContent>
     </Card>
   )
 }
 
-export default Trophy
+export default Transaksi
