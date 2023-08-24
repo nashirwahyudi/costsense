@@ -41,15 +41,7 @@ const data = [
 
 const position = [51.505, -0.09]
 
-const TotalEarning = () => {
-  const defaultProps = {
-    center: {
-      lat: 10.99835602,
-      lng: 77.01502627
-    },
-    zoom: 11
-  }
-
+const MapContainer = () => {
   const Map = useMemo(
     () =>
       dynamic(() => import('../../layouts/components/Map'), {
@@ -72,7 +64,7 @@ const TotalEarning = () => {
       />
       <CardContent
         sx={{ pt: theme => `${theme.spacing(2.25)} !important`, textAlign: 'center' }}
-        style={{ height: '30vh', width: '100%' }}
+        style={{ height: '40vh', width: '100%' }}
       >
         <Map />
         {/* <img src='/images/misc/dummy-shapley.png' alt='Shapley dummy' height='300px' /> */}
@@ -81,4 +73,4 @@ const TotalEarning = () => {
   )
 }
 
-export default TotalEarning
+export default MapContainer

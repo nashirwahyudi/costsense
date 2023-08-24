@@ -13,6 +13,9 @@ import PerfectScrollbar from 'react-perfect-scrollbar'
 import Drawer from './Drawer'
 import VerticalNavItems from './VerticalNavItems'
 import VerticalNavHeader from './VerticalNavHeader'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react'
 
 // ** Util Import
 import { hexToRGBA } from 'src/@core/utils/hex-to-rgba'
@@ -32,6 +35,10 @@ const StyledBoxForShadow = styled(Box)({
 })
 
 const Navigation = props => {
+  useEffect(() => {
+    AOS.init()
+  }, [])
+
   // ** Props
   const {
     hidden,

@@ -53,6 +53,7 @@
     "@mui/lab": "^5.0.0-alpha.70",
     "@mui/material": "^5.4.3",
     "@popperjs/core": "^2.11.2",
+    "aos": "^3.0.0-beta.6",
     "apexcharts-clevision": "3.28.5",
     "babel-eslint": "^10.1.0",
     "clsx": "^1.1.1",
@@ -82,7 +83,7 @@
   },
   "browserslist": [
     ">0.2%",
-        "not dead",
-        "not op_mini all"
-      ]
+    "not dead",
+    "not op_mini all"
+  ]
 }

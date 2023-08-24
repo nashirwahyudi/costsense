@@ -9,6 +9,7 @@ import Typography from '@mui/material/Typography'
 // ** Configs
 import themeConfig from 'src/configs/themeConfig'
 
+
 // ** Styled Components
 const MenuHeaderWrapper = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -46,7 +47,7 @@ const VerticalNavHeader = props => {
         userVerticalNavMenuBranding(props)
       ) : (
         <Link href='/' passHref>
-          <StyledLink>
+          <StyledLink data-aos='fade-right'>
             <svg
               width={30}
               height={25}

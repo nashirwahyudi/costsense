@@ -29,7 +29,8 @@ const WeeklyOverview = () => {
         distributed: true,
         columnWidth: '40%',
         endingShape: 'rounded',
-        startingShape: 'rounded'
+        startingShape: 'rounded',
+        horizontal: true
       }
     },
     stroke: {
@@ -53,7 +54,7 @@ const WeeklyOverview = () => {
       theme.palette.primary.main,
       theme.palette.primary.main,
       theme.palette.primary.main,
-      theme.palette.primary.main,
+      theme.palette.primary.main
     ],
     states: {
       hover: {
@@ -94,7 +95,7 @@ const WeeklyOverview = () => {
         }
       />
       <CardContent sx={{ '& .apexcharts-xcrosshairs.apexcharts-active': { opacity: 0 } }}>
-        <ReactApexcharts type='bar' height={205} options={options} series={[{ data: [37, 45, 57, 75, 70, 65, 50] }]} />
+        <ReactApexcharts type='bar' height={259} options={options} series={[{ data: [37, 45, 57, 75, 70, 65, 50] }]} />
         <Box sx={{ mb: 7, display: 'flex', alignItems: 'center' }}>
           <Typography variant='h5' sx={{ mr: 4 }}>
             50%

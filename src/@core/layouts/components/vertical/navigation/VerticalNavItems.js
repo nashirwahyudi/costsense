@@ -18,7 +18,7 @@ const VerticalNavItems = props => {
     return <TagName {...props} key={index} item={item} />
   })
 
-  return <>{RenderMenuItems}</>
+  return <div data-aos='fade-up'>{RenderMenuItems}</div>
 }
 
 export default VerticalNavItems

@@ -20,27 +20,31 @@ import MapContainer from 'src/views/dashboard/MapContainer'
 import StatisticsCard from 'src/views/dashboard/StatisticsCard'
 import WeeklyOverview from 'src/views/dashboard/WeeklyOverview'
 import Control from 'src/views/dashboard/Control'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react'
 
 const Dashboard = () => {
+  useEffect(() => {
+    AOS.init()
+  }, [])
+
   return (
     <ApexChartWrapper>
       <Grid container spacing={6}>
-        <Grid item xs={12}>
+        <Grid item xs={12} data-aos='fade-up' data-aos-duration='700'>
           <Control />
         </Grid>
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={4} data-aos='fade-up' data-aos-duration='900'>
           <Transaksi />
         </Grid>
-        <Grid item xs={12} md={8}>
+        <Grid item xs={12} md={8} data-aos='fade-up' data-aos-duration='900'>
           <StatisticsCard />
         </Grid>
-        <Grid item xs={12} md={12}>
+        <Grid item xs={12} md={8} lg={8} data-aos='fade-up' data-aos-duration='900'>
           <MapContainer />
         </Grid>
-        <Grid item xs={12} md={6} lg={4}>
-          <WeeklyOverview />
-        </Grid>
-        {/* <Grid item xs={12} md={6} lg={4}>
+        {/* <Grid item xs={12} md={4} lg={4}>
           <Grid container spacing={6}>
             <Grid item xs={6}>
               <CardStatisticsVerticalComponent
@@ -86,13 +90,16 @@ const Dashboard = () => {
             </Grid>
           </Grid>
         </Grid> */}
+        <Grid item xs={12} md={4} lg={4} data-aos='fade-up' data-aos-duration='900'>
+          <WeeklyOverview />
+        </Grid>
         {/* <Grid item xs={12} md={6} lg={4}>
           <SalesByCountries />
         </Grid>
         <Grid item xs={12} md={12} lg={8}>
           <DepositWithdraw />
         </Grid> */}
-        <Grid item xs={12}>
+        <Grid item xs={12} data-aos='fade-up' data-aos-duration='900'>
           <Table />
         </Grid>
       </Grid>
