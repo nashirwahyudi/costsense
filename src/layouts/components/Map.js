@@ -36,6 +36,16 @@ const Map = () => {
               weight: 0.5
             }
           }}
+          onEachFeature={(feature, layer) => {
+            const popupOptions = {
+              minWidth: 100,
+              maxWidth: 250,
+              className: 'popup-classname'
+            }
+            layer.bindPopup(() => {
+              return `<p><strong>${feature.properties.field_2} (${feature.properties.field_1})</strong></p><p>Jumlah FKRTL: <strong>${feature.properties.field_3}</strong></p>`
+            }, popupOptions)
+          }}
         />
         <Legend map={map} />
       </MapContainer>

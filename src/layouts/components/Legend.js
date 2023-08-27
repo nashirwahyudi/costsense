@@ -20,7 +20,6 @@ const Legend = ({ map }) => {
               label +
               (labels[idx + 1] ? '&ndash;' + labels[idx + 1] : '+')
           )
-          console.log(labels)
         })
         div.innerHTML = labels.join('<br/>')
 

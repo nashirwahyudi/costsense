@@ -9,6 +9,7 @@ import Select, { SelectChangeEvent } from '@mui/material/Select'
 import InputLabel from '@mui/material/InputLabel'
 import MenuItem from '@mui/material/MenuItem'
 import { useState } from 'react'
+import chartdata from './../../../public/assets/count_fkrtl_prov.json'
 
 // Styled component for the triangle shaped background image
 const TriangleImg = styled('img')({
@@ -35,13 +36,23 @@ const Control = () => {
         <Typography variant='h6'>Transaksi BPJS</Typography>
         <FormControl sx={{ m: 1, minWidth: 120 }} fullWidth>
           <InputLabel id='wilayah-label'>Wilayah</InputLabel>
-          <Select labelId='wilayah-label' id='wilayah-helper' value={wilayah} label='Wilayah'>
+          <Select
+            labelId='wilayah-label'
+            id='wilayah-helper'
+            value={wilayah}
+            label='Wilayah'
+            onChange={selected => {
+              setWilayah(selected.target.value)
+            }}
+          >
             <MenuItem value=''>
-              <em>None</em>
+              <strong>Nasional</strong>
             </MenuItem>
-            <MenuItem value={10}>Nasional</MenuItem>
-            <MenuItem value={20}>Jawa Barat</MenuItem>
-            <MenuItem value={30}>DKI Jakarta</MenuItem>
+            {chartdata.map((elem, idx) => (
+              <MenuItem key={idx} value={elem.prov}>
+                {elem.prov}
+              </MenuItem>
+            ))}
           </Select>
         </FormControl>
       </CardContent>

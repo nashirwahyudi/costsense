@@ -7,6 +7,7 @@ import CardHeader from '@mui/material/CardHeader'
 import IconButton from '@mui/material/IconButton'
 import Typography from '@mui/material/Typography'
 import CardContent from '@mui/material/CardContent'
+import chartdata from './../../../public/assets/count_fkrtl_prov.json'
 
 // ** Icons Imports
 import DotsVertical from 'mdi-material-ui/DotsVertical'
@@ -66,7 +67,7 @@ const WeeklyOverview = () => {
       }
     },
     xaxis: {
-      categories: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+      categories: chartdata.slice(0, 7).map((row, idx) => row.prov),
       tickPlacement: 'on',
       labels: { show: false },
       axisTicks: { show: false },
@@ -77,7 +78,7 @@ const WeeklyOverview = () => {
       tickAmount: 4,
       labels: {
         offsetX: -17,
-        formatter: value => `${value > 999 ? `${(value / 1000).toFixed(0)}` : value}k`
+        formatter: value => `${value > 999 ? `${(value / 1000).toFixed(0)}` : value}`
       }
     }
   }
@@ -85,7 +86,7 @@ const WeeklyOverview = () => {
   return (
     <Card>
       <CardHeader
-        title='Top 10 Provinsi ...'
+        title='Top 7 Provinsi dengan FKRTL Terbanyak'
         titleTypographyProps={{
           sx: { lineHeight: '2rem !important', letterSpacing: '0.15px !important' }
         }}
@@ -96,7 +97,17 @@ const WeeklyOverview = () => {
         }
       />
       <CardContent sx={{ '& .apexcharts-xcrosshairs.apexcharts-active': { opacity: 0 } }}>
-        <ReactApexcharts type='bar' height={259} options={options} series={[{ data: [37, 45, 57, 75, 70, 65, 50] }]} />
+        <ReactApexcharts
+          type='bar'
+          height={259}
+          options={options}
+          series={[
+            {
+              data: chartdata.slice(0, 7).map((row, idx) => row.count),
+              name: 'Jumlah FKRTL'
+            }
+          ]}
+        />
         <Box sx={{ mb: 7, display: 'flex', alignItems: 'center' }}>
           <Typography variant='h5' sx={{ mr: 4 }}>
             50%
