@@ -10,7 +10,7 @@ const Legend = ({ map }) => {
       legend.onAdd = () => {
         const div = L.DomUtil.create('div', 'info legend')
         const grades = [0, 2500, 5000, 7500, 10000]
-        const labels = []
+        const labels = ['<div><strong>Jumlah FKRTL</strong></div>']
 
         grades.forEach((label, idx) => {
           labels.push(
@@ -18,7 +18,7 @@ const Legend = ({ map }) => {
               MapHelper.getColor(label + 1) +
               '"></i> ' +
               label +
-              (labels[idx + 1] ? '&ndash;' + labels[idx + 1] : '+')
+              (grades[idx + 1] ? '&ndash;' + grades[idx + 1] : '+')
           )
         })
         div.innerHTML = labels.join('<br/>')

@@ -45,6 +45,12 @@ const Map = () => {
             layer.bindPopup(() => {
               return `<p><strong>${feature.properties.field_2} (${feature.properties.field_1})</strong></p><p>Jumlah FKRTL: <strong>${feature.properties.field_3}</strong></p>`
             }, popupOptions)
+            layer.on('mouseover', e => {
+              e.target.setStyle({ fillOpacity: 0.4 })
+            })
+            layer.on('mouseout', e => {
+              e.target.setStyle({ fillOpacity: 0.7 })
+            })
           }}
         />
         <Legend map={map} />
