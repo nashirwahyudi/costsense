@@ -34,7 +34,7 @@ const Transaksi = () => {
           Jumlah transaksi BPJS terverif.
         </Typography>
         <Typography variant='h5' sx={{ my: 4, color: 'primary.main' }}>
-          12578 Transaksi
+          872201 Transaksi
         </Typography>
         <Button variant='contained' size='small'>
           Lihat Lebih Lengkap

@@ -15,6 +15,7 @@ import ApexChartWrapper from 'src/@core/styles/libs/react-apexcharts'
 
 // ** Demo Components Imports
 import Table from 'src/views/dashboard/Table'
+import Shapley from 'src/views/dashboard/Shapley'
 import Transaksi from 'src/views/dashboard/Transaksi'
 import MapContainer from 'src/views/dashboard/MapContainer'
 import StatisticsCard from 'src/views/dashboard/StatisticsCard'
@@ -48,7 +49,7 @@ const Dashboard = () => {
           <BarChart />
         </Grid>
         <Grid item xs={12} data-aos='fade-up' data-aos-duration='900'>
-          <Table />
+          <Shapley />
         </Grid>
       </Grid>
     </ApexChartWrapper>

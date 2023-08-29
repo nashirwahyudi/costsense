@@ -14,7 +14,9 @@ const statusObj = {
 const DashboardShap = () => {
   return (
     <Card>
-      <CardContent></CardContent>
+      <CardContent sx={{ pt: theme => `${theme.spacing(2.25)} !important`, textAlign: 'center' }}>
+        <img width={500} alt='swarmplot' src='/images/swarmplot_national.png' />
+      </CardContent>
     </Card>
   )
 }

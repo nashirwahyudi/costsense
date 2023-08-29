@@ -17,19 +17,19 @@ import AccountOutline from 'mdi-material-ui/AccountOutline'
 
 const salesData = [
   {
-    stats: '245000',
+    stats: '872201',
     title: 'Observasi',
     color: 'primary',
     icon: <TrendingUp sx={{ fontSize: '1.75rem' }} />
   },
   {
-    stats: '12578',
-    title: 'Transaksi',
+    stats: '871674',
+    title: 'Non-Indikasi',
     color: 'success',
     icon: <AccountOutline sx={{ fontSize: '1.75rem' }} />
   },
   {
-    stats: '6',
+    stats: '527',
     color: 'warning',
     title: 'Indikasi',
     icon: <CellphoneLink sx={{ fontSize: '1.75rem' }} />
