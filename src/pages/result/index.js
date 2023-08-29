@@ -30,18 +30,11 @@ const MUITable = () => {
           <CardContent sx={{ textAlign: 'center' }}>
             <img src='/images/Summary_National.png' alt='' width={700} />
             <p style={{ textAlign: 'justify', textIndent: '50px' }}>
-              <strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Suspendisse ultricies tortor
-              tempor diam rhoncus porta facilisis sit amet augue. Nulla blandit pulvinar sagittis. Ut luctus, felis quis
-              aliquam tincidunt, nulla dui malesuada ipsum, eget hendrerit ipsum odio et enim. Nulla non dui enim.
-              Vivamus interdum lectus ornare metus iaculis, id varius velit bibendum. In eleifend lacinia facilisis.
-              Etiam pellentesque dui in accumsan hendrerit. Donec nec massa ut dui tincidunt egestas at id felis. In eu
-              magna non arcu suscipit elementum ut at massa. Nullam fermentum, ex in commodo lacinia, neque dolor
-              facilisis purus, sed tristique turpis ligula non arcu. Sed at enim ac urna cursus sagittis. Suspendisse
-              laoreet egestas efficitur. Proin id purus felis. Aenean at porta lacus. In hac habitasse platea dictumst.
-              Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis auctor nibh lectus, non sollicitudin
-              nisi tristique eu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed viverra dapibus
-              libero, tempus sodales risus mattis quis. Nam dictum aliquam justo, quis porta est sollicitudin quis. Ut
-              ac ipsum porta, varius risus nec, lacinia lectus.
+              Diagram diatas menunjukkan besarnya pengaruh dari setiap nilai variabel terhadap hasil prediksi dari{' '}
+              <strong>model</strong>
+              yang kami bangun. Terlihat bahwa variabel FKL22 dan PSTV14 memiliki pengaruh positif paling tinggi
+              sedangkan variabel umur_peserta_saat_kunjungan merupakan variabel yang memiliki pengaruh negatif paling
+              tinggi.
             </p>
           </CardContent>
         </Card>
@@ -64,7 +57,7 @@ const MUITable = () => {
               libero, tempus sodales risus mattis quis. Nam dictum aliquam justo, quis porta est sollicitudin quis. Ut
               ac ipsum porta, varius risus nec, lacinia lectus. Vivamus dignissim dui cursus eros sagittis aliquam.
               Donec efficitur urna ex, at suscipit quam aliquam non. Quisque auctor velit in imperdiet molestie. Morbi
-              dapibus suscipit facilisis. Cras eget vestibulum justo.{' '}
+              dapibus suscipit facilisis. Cras eget vestibulum justo. `
             </p>
             <img src='/images/individual.jpeg' alt='' width={700} />
             <p style={{ textAlign: 'justify', textIndent: '50px' }}>
