@@ -86,7 +86,7 @@ const WeeklyOverview = () => {
   return (
     <Card>
       <CardHeader
-        title='Top 7 Provinsi dengan FKRTL Terbanyak'
+        title='Top 7 Provinsi dengan kunjungan FKRTL Terbanyak'
         titleTypographyProps={{
           sx: { lineHeight: '2rem !important', letterSpacing: '0.15px !important' }
         }}
@@ -104,7 +104,7 @@ const WeeklyOverview = () => {
           series={[
             {
               data: chartdata.slice(0, 7).map((row, idx) => row.count),
-              name: 'Jumlah FKRTL'
+              name: 'Jumlah Kunjungan'
             }
           ]}
         />

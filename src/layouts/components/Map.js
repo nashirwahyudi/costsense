@@ -43,7 +43,7 @@ const Map = () => {
               className: 'popup-classname'
             }
             layer.bindPopup(() => {
-              return `<p><strong>${feature.properties.field_2} (${feature.properties.field_1})</strong></p><p>Jumlah FKRTL: <strong>${feature.properties.field_3}</strong></p>`
+              return `<p><strong>${feature.properties.field_2} (${feature.properties.field_1})</strong></p><p>Jumlah Kunjungan: <strong>${feature.properties.field_3}</strong></p>`
             }, popupOptions)
             layer.on('mouseover', e => {
               e.target.setStyle({ fillOpacity: 0.4 })

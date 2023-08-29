@@ -10,7 +10,7 @@ const Legend = ({ map }) => {
       legend.onAdd = () => {
         const div = L.DomUtil.create('div', 'info legend')
         const grades = [0, 2500, 5000, 7500, 10000]
-        const labels = ['<div><strong>Jumlah FKRTL</strong></div>']
+        const labels = ['<div><strong>Jumlah Kunjungan</strong></div>']
 
         grades.forEach((label, idx) => {
           labels.push(
